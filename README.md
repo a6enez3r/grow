@@ -1,4 +1,4 @@
-# grow
+# `grow` [![lint](https://github.com/a6enez3r/grow/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/a6enez3r/grow/actions/workflows/lint.yml)
 
 Is a tiny python CLI that allows you to search for a phrase in files like `grep` with the optional ability to filter by team or owners specified in a `CODEOWNERS` file. It is invoked with the following syntax:
 
