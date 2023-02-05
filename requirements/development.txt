@@ -2,7 +2,7 @@ clize==5.0.0
 codeowners==0.6.0
 tabulate==0.8.10
 black==22.6.0
-pylint==2.14.5
+pylint==2.16.1
 pytest==7.1.2
 pytest-cov==3.0.0
 versioneer==0.20
