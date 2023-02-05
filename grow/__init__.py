@@ -25,7 +25,8 @@ from tabulate import tabulate
 
 from grow import _version
 
-__version__ = _version.get_versions()['version']
+__version__ = _version.get_versions()["version"]
+
 
 class Grow:
     """git grep with ability to filter paths by owner team"""
@@ -42,7 +43,7 @@ class Grow:
 
     def __str__(self):
         return self.__class__.__name__
-    
+
     @staticmethod
     def version():
         """get current version"""
@@ -75,7 +76,7 @@ class Grow:
         owners = CodeOwners(codeowners_data)
         print(
             f"\nSearch Stats: {Grow.OKBLUE}{phrase}{Grow.ENDC} \n\n",
-            f"Unique Owners:     {Grow.OKCYAN}{len(set([path[2][0][1] for path in owners.paths]))}{Grow.ENDC}\n",
+            f"Unique Owners:     {Grow.OKCYAN}{len({path[2][0][1] for path in owners.paths})}{Grow.ENDC}\n",  # pylint: disable=line-too-long
             f"Total Paths:       {Grow.OKCYAN}{len(owners.paths)}{Grow.ENDC}\n",
             f"Matching Paths:    {Grow.OKCYAN}{len(files)}{Grow.ENDC}\n",
             f"Repo Path:         {Grow.OKCYAN}{repo_path}{Grow.ENDC}\n",
@@ -93,7 +94,7 @@ class Grow:
         if len(table) != 0:
             print(tabulate(table, headers=["File Path", "Owner"]))
             print()
-        
+
         color = Grow.FAIL if len(table) == 0 else Grow.OKGREEN
         print(
             f"{Grow.BOLD}Found: {color}{len(table)}{Grow.ENDC} {Grow.BOLD}files that{Grow.ENDC}"

@@ -7,4 +7,4 @@ from grow import Grow
 
 
 if __name__ == "__main__":
-   run({"search": Grow.search, "version": Grow.version})
+    run({"search": Grow.search, "version": Grow.version})
