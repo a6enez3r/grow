@@ -5,4 +5,4 @@ black==23.1.0
 pylint==2.16.1
 pytest==7.2.1
 pytest-cov==4.0.0
-versioneer==0.20
+versioneer==0.28
