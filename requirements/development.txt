@@ -3,6 +3,6 @@ codeowners==0.6.0
 tabulate==0.9.0
 black==23.1.0
 pylint==2.16.2
-pytest==7.2.1
+pytest==7.2.2
 pytest-cov==4.0.0
 versioneer==0.28
